@@ -1,0 +1,28 @@
+select {
+    position: absolute;
+    top: calc(calc(255 * 2px) + 40px);
+  }
+  label {
+    position: absolute;
+    top: calc(calc(255 * 2px) + 10px);
+  }
+  #grad, #gradl {
+    left: 0px;
+  }
+  #y, #yl {
+    left: 200px;
+  }
+  #stag, #stagl {
+    left: 400px;
+  }
+  #stagvl {
+    top: calc(calc(255 * 2px) + 70px);
+  }
+  #stagv {
+    position: absolute;
+    top: calc(calc(255 * 2px) + 100px);
+  }
+  #mode, #model {
+    left: 600px;
+  }
+  

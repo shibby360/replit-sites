@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>rgb color grid</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <label id='gradl'>gradient(x)</label>
+  <select id='grad'>
+    <option value="r" selected>Red</option>
+    <option value="g">Green</option>
+    <option value="b">Blue</option>
+  </select>
+  <label id='yl'>y value</label>
+  <select id='y'>
+    <option value="r">Red</option>
+    <option value="g" selected>Green</option>
+    <option value="b">Blue</option>
+  </select>
+  <label id='stagl'>stagnant</label>
+  <select id='stag'>
+    <option value="r">Red</option>
+    <option value="g">Green</option>
+    <option value="b" selected>Blue</option>
+  </select>
+  <label id='stagvl'>stagnant value</label>
+  <input type="range" max="255" id="stagv">
+  <div id="grid"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

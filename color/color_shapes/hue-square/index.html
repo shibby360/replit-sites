@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>hue color grid</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <label id='gradl'>gradient(x)</label>
+  <select id='grad'>
+    <option value="h" selected>Hue</option>
+    <option value="ws">whiteness/saturation</option>
+    <option value="bl">blackness/lightness</option>
+  </select>
+  <label id='yl'>y value</label>
+  <select id='y'>
+    <option value="h">Hue</option>
+    <option value="ws" selected>whiteness/saturation</option>
+    <option value="bl">blackness/lightness</option>
+  </select>
+  <label id='stagl'>stagnant</label>
+  <select id='stag'>
+    <option value="h">Hue</option>
+    <option value="ws">whiteness/saturation</option>
+    <option value="bl" selected>blackness/lightness</option>
+  </select>
+  <label id='model'>mode</label>
+  <select id='mode'>
+    <option value='hsl'>hsl</option>
+    <option value="hwb">hwb</option>
+  </select>
+  <label id='stagvl'>stagnant value</label>
+  <input type="range" max="255" id="stagv">
+  <div id="grid"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
