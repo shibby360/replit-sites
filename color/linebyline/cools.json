@@ -1,0 +1,12 @@
+{
+	"green becoming sea":{
+		"r":"0",
+		"g":"rcval",
+		"b":"y"
+	},
+	"burning green":{
+		"r":"y",
+		"g":"rcval",
+		"b":"0"
+	}
+}
