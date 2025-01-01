@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>svg dynamic editor</title>
+  <link href="top.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="objects">
+    <add-line></add-line>
+  </div>
+  <div id="svgpaper">
+    <svg id='svgout' width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs></defs>
+    </svg>
+    <div id='svg-config-btn'>
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 500 500'>
+      <rect x="300" y="125" width="75" height="275" style="transform-origin: center;transform: rotate(45deg);x: 197;y: 127;width: 106px;height: 388px;fill: grey;stroke: black;stroke-width: 3px;"></rect>
+      <circle style="cx: 335;cy: 162;r: 88;fill: grey;stroke: black;stroke-width: 3px;"></circle>
+      <circle style="cx: 385;cy: 102;r: 60;fill: white;"></circle></svg>
+    </div>
+    <div id="svg-config">
+      <label>x of top left of view</label>
+      <input style="width: 90%;" id="xview" value='0' type='number'>
+      <label>y of top left of view</label>
+      <input style="width: 90%;" id="yview" value='0' type='number'>
+      <label>width of view</label>
+      <input style="width: 90%;" id="viewwidth" value='100' type='number'>
+      <label>height of view</label>
+      <input style="width: 90%;" id="viewheight" value='100' type='number'>
+      <button id='switch'>Switch to typed</button>
+    </div>
+  </div>
+  <script src='https://code.jquery.com/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/expr-eval/2.0.2/bundle.min.js" integrity="sha512-TNliDPFdpL1W1sP7v9WzHUxTAY+PN7wRiHqJzntb4HpaJ0HlreSm0tzbA8MU7EBEoPTYgEtB+ZpbBB2yQQu49g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="top.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+<!-- this will solve functions and eliminate use of eval: https://github.com/silentmatt/expr-eval 
+strings and text: https://github.com/silentmatt/expr-eval/issues/244
+-->
