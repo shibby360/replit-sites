@@ -1,0 +1,11 @@
+{
+	"san francisco":["family", "exp", "cuisine"],
+	"switzerland":["snow", "exp"],
+	"lake tahoe":["snow", "mod", "sports"],
+	"orlando":["hot", "theme", "mod"],
+	"delhi":["family", "hot", "less"],
+	"mumbai":["hot", "less", "cuisine"],
+	"paris":["arts", "exp"],
+	"new york":["arts", "family", "snow", "exp", "cuisine"],
+	"washington D.C.":["arts", "mod"]
+}
