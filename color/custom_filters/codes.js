@@ -1,0 +1,41 @@
+var codes = {}
+codes.NONE = 0
+codes.RGB2HSL = 1
+codes.RGB2GRAY = 2
+codes.RGB2BGR = 3
+codes.RGB2GBR = 4
+codes.RGB2BRG = 5
+codes.RGB2RBG = 6
+codes.INVERT = 7
+codes.MONO = 8
+codes.RGB2RANDGB = 9
+codes.RGB2RRANDB = 10
+codes.RGB2RGRAND = 11
+codes.BLUEIFY = 12
+codes.REDIFY = 13
+codes.GREENIFY = 14
+codes.ELIMLOW = 15
+codes.BRIGHTEN = 16
+codes.DARKEN = 17
+codes.ELIMLOWEXAG = 18
+codes.NORED = 19
+codes.NOGREEN = 20
+codes.NOBLUE = 21
+codes.REDEXAG = 22
+codes.GREENEXAG = 23
+codes.BLUEEXAG = 24
+codes.ELIMHIGH = 25
+codes.ELIMHIGHEXAG = 26
+codes.EXAG = 27
+codes.EXAGINVERT = 28
+codes.INVMAX = 29
+codes.INVMIN = 30
+codes.SHAQ = 31
+codes.FLIP = 32
+codes.ADDNEXTLAST = 33
+for(var i in codes) {
+  var opt = document.createElement('option')
+  opt.value = codes[i]
+  opt.innerText = i
+  document.getElementById('modeinp').appendChild(opt)
+}

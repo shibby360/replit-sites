@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>color picker</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style id="saturationstyle"></style>
+    <style id="lightnessstyle"></style>
+  </head>
+  <body>
+    <h3 id="rgbheader">RGB</h3>
+    <div id="rgbdiv">
+      <input type="range" id="redamount" class="amountpickers" min="0" max="255" value="0">
+      <br>
+      <input type="range" id="greenamount" class="amountpickers" min="0" max="255" value="0">
+      <br>
+      <input type="range" id="blueamount" class="amountpickers" min="0" max="255" value="0">
+      <br>
+      <div id="preview"></div>
+    </div>
+    <h3>HSL</h3>
+    <div id="hsldiv">
+      <input type="range" id="anglepicker" class="picker" min="0" max="360" value="0">
+      <br>
+      <input type="range" id="saturation" min="0" max="100" class="picker" value="100">
+      <br>
+      <input type="range" id="lightness" min="0" max="100" class="picker" value="50">
+      <div id="hslpreview"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

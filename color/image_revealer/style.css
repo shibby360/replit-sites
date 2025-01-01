@@ -1,0 +1,15 @@
+img {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
