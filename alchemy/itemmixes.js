@@ -1,0 +1,31 @@
+var itemmixes = {}
+itemmixes.mixes = {
+	'smoke':['fire', 'water'],
+	'mud':['water', 'earth'],
+	'tornado':['air', 'air', 'air'],
+	'earthquake':['earth', 'mud', 'tornado'],
+	'tsunami':['earthquake', 'water'],
+	'oxygen':['air', 'air'],
+	'space':['air', 'water', 'earth'],
+	'energy':['space', 'oxygen'],
+	'person':['water', 'energy', 'oxygen'],
+	'planet':['person', 'earth', 'energy'],
+	'star':['fire', 'energy'],
+	'solar system':['planet', 'planet', 'star'],
+	'galaxy':['solar system', 'solar system', 'solar system'],
+	'universe':['galaxy', 'galaxy', 'galaxy'],
+	'gravity':['energy', 'earth'],
+	'blackhole':['space', 'energy'],
+	'time':['blackhole', 'gravity'],
+	'life':['energy', 'energy', 'energy'],
+	'death':['time', 'life'],
+	'plant':['life', 'earth'],
+	'tree':['plant', 'plant'],
+	'forest':['tree', 'tree', 'tree'],
+	'food':['plant', 'tree', 'energy'],
+	'indigestion':['person', 'food', 'food'],
+	'medicine':['person', 'plant', 'energy'],
+	'peace':['indigestion', 'medicine'],
+	'PISSPOOP':['indigestion', 'water', 'energy']
+}
+// https://replit.com/@HyperHacker/Alchemy
