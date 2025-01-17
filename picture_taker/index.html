@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Picture taker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="camera">
+      <video id="video" controls></video>
+      <button id="startbutton">Click me</button>
+      <button id="filterbutton">Filters</button>
+      <div id="filtermenu">
+        <label for="blur">Blur</label>
+        <input type="range" name="blur" min="0" max="75" value="0">
+        <br>
+        <label for="brightness">Brightness</label>
+        <input type="range" name="brightness" min="100" max="400" value="100">
+        <br>
+        <label for="contrast">Contrast</label>
+        <input type="range" name="contrast" min="100" max="400" value="100">
+        <!-- Add drop-shadow later -->
+        <br>
+        <label for="grayscale">Grayscale</label>
+        <input type="range" name="grayscale" min="0" max="100" value="0">
+        <br>
+        <label for="hueRotate">Hue Rotate</label>
+        <input type="range" name="hueRotate" min="0" max="360" value="0">
+        <br>
+        <label for="invert">Invert colors</label>
+        <input type="range" name="invert" min="0" max="100" value="0">
+        <br>
+        <label for="opacity">Opacity</label>
+        <input type="range" name="opacity" min="0" max="100" value="100">
+        <br>
+        <label for="saturation" id="satur">Saturation(click me to reset to normal)</label>
+        <input type="range" name="saturation" min="0" max="400" value="100">
+        <br>
+        <label for="sepia">Sepia</label>
+        <input type="range" name="sepia" min="0" max="100" value="0">
+      </div>
+      <div id="options">
+        <h4>Options</h4>
+        <label for="auto">Automatically download</label>
+        <input type="checkbox" name="auto" id="autodwn">
+        <input type="text" placeholder="You file name(without '.png')" id="dwnnm">
+        <br>
+        <label for="picrem">Remove preview</label>
+        <input type="checkbox" name="picrem" id="picrem">
+        <br>
+        <button onclick="cam = cam === 'user' ? 'environment' : 'user'; start(true);" id="flipcam">Flip camera</button>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div class="output">
+      <img id="photo" alt="The screen capture will appear in this box."> 
+    </div>
+    <p id="datauri"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
