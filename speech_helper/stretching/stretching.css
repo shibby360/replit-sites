@@ -1,0 +1,19 @@
+body {
+	font-family: sans-serif;
+	background-color: lightblue;
+}
+#settingsbutton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 20%;
+	background-color: white;
+	border-color: white;
+}
+.settingps {
+	font-size: 15px;
+	margin: 0px;
+}
+#settingsmenu {
+	background-color: gray;
+}

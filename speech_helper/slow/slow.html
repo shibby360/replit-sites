@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Speech Skills: Slowing down</title>
+		<link href="slow.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<button onclick="window.location = '/'">Back to home</button>
+		<button onclick="settings()" id='settingsbutton'><img src="/gear.png" alt="gear.png" width="25px" height="25px"></button>
+		<button onclick="start()">Give new sentence</button>
+		<p style="color: green;" id="tip">Remember to slow down your words</p>
+		<p id='sentence'></p>
+		<div style="display: none;" id="settingsmenu">
+			<p class="settingps">Interval in reading words(seconds): </p>
+			<input id="intervalinput">
+			<label for="darkthemecheck">Dark Theme</label>
+			<input type="checkbox" id="darkthemecheck" name="darkthemecheck">
+			<button onclick="setsettings()">Save settings</button>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="slow.js"></script>
+	</body>
+</html>
