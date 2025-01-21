@@ -1,0 +1,99 @@
+:root {
+	--clocksize: 150px;
+}
+#clock {
+	border-radius: 50%;
+	width: var(--clocksize);
+	height: var(--clocksize);
+	border: 3px black solid;
+	position: relative;
+}
+p {
+	margin: 0;
+}
+.nums {
+	position: absolute;
+}
+#num3, #num9 {
+	transform: translateY(-50%);
+}
+#num6, #num12 {
+	transform: translateX(-50%);
+}
+#num12 {
+	top: 0;
+	left: 50%;
+}
+#num3 {
+	top: 50%;
+	right: 0;
+}
+#num6 {
+	bottom: 0;
+	left: 50%;
+}
+#num9 {
+	top: 50%;
+	left: 0;
+}
+#minutehand, #hourhand {
+	position: absolute;
+	border-left: 3px black solid;
+	width: 0px;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom left;
+}
+#minutehand {
+	height: calc((var(--clocksize) / 2) * 3/4);
+}
+#hourhand {
+	height: calc(var(--clocksize) / 4);
+}
+/* Ticks */
+#tickmarks > div {
+	width: 15px;
+	height: 0;
+	border-top: 3px black solid;
+	position: absolute;
+}
+#tick1 {
+	top: 10%;
+	left: 70%;
+	transform: rotate(135deg);
+}
+#tick2 {
+	top: 30%;
+	left: 85%;
+	transform: rotate(145deg);
+}
+#tick3 {
+	top: 70%;
+	left: 85%;
+	transform: rotate(35deg);
+}
+#tick4 {
+	top: 90%;
+	left: 65%;
+	transform: rotate(55deg);
+}
+#tick5 {
+	top: 87%;
+	left: 20%;
+	transform: rotate(310deg);
+}
+#tick6 {
+	top: 70%;
+	left: 5%;
+	transform: rotate(330deg);
+}
+#tick7 {
+	top: 25%;
+	left: 5%;
+	transform: rotate(35deg);
+}
+#tick8 {
+	top: 10%;
+	left: 20%;
+	transform: rotate(40deg);
+}
