@@ -1,0 +1,22 @@
+svg image, svg line {
+	display: none;
+}
+text {
+	font-family: monospace;
+}
+#hanger {
+	display: block;
+}
+#word {
+	font-size: 45px;
+}
+#wintext {
+	fill: green;
+}
+#losetext {
+	fill: red;
+}
+#wintext, #losetext {
+	display: none;
+	font-size: 45px;
+}

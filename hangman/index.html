@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <svg style="position: absolute; top: 0; left: 0; width:100vw; height: 100vh;">
+      <text id="alreadyGuessed">-</text>
+      <g id="letter">
+        <rect width="60" height="50" x="820" y="230" fill="none" stroke="black"></rect>
+        <text x="825" y="250">----- -</text>
+      </g>
+      <line id="hanger" x1="700" y1="300" x2="700" y2="250" stroke="black" stroke-width="5"></line>
+      <image xlink:href="head.png" width="40" height="40" x="680" y="300" id="1"></image>
+      <image xlink:href="upline.png" width="60" height="40" x="670" y="340" id="2"></image>
+      <line x1="700" y1="355" x2="670" y2="355" stroke="black" id="3"></line>
+      <line x1="700" y1="355" x2="730" y2="355" stroke="black" id="4"></line>
+      <line x1="700" y1="380" x2="680" y2="400" stroke="black" id="5"></line>
+      <line x1="700" y1="380" x2="720" y2="400" stroke="black" id="6"></line>
+      <text id="word" x="800" y="350">-</text>
+      <text id="wintext" x="750" y="420">You win!</text>
+      <text id="losetext" x="750" y="420">You lose!</text>
+    </svg>
+    <script src="script.js"></script>
+  </body>
+</html>
