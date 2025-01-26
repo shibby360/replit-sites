@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+}
+pre {
+   position: relative;
+}
+pre > button {
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   width: 10px;
+   height: 10px;
+}

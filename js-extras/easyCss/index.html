@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>easyCss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/an-old-hope.min.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://js-extra-shivankchhaya.repl.co/style.css">
+  </head>
+  <body>
+    <h1>easyCss!</h1>
+    <h4>easyCss()</h4>
+    <p>Add all functions and variables to the global scope.</p>
+    <pre><code class="language-javascript">easyCss()</code></pre>
+    <h4>CssSize(size, unit)</h4>
+    <p>A constructor used in most functions in easyCss.</p>
+    <pre><code class="language-javascript">var size = new CssSize(30)
+//size.measure => '30px'</code></pre>
+    <h4>addCssToSingleElement(el, css)</h4>
+    <p>Add css to element. css is an object with your css rules, and el must be a DOM element.</p>
+    <pre><code class="language-javascript">var p = document.getElementById('p')
+addCsstoSingleElement(p, {color:'red', 'background-color':'green'})</code></pre>
+    <h4>addCssByQuery(query, css)</h4>
+    <p>Add css to all elements that match query.</p>
+    <pre><code class="language-javascript">addCssByQuery('body', {'background-color':'yellow'})
+//Changes body's background color to yellow</code></pre>
+    <h2><code>grid()</code> and <code>flex()</code></h2>
+    <h4>grid(container, children, options)</h4>
+    <ul>
+      <li><code>container</code>: The grid container.</li>
+      <li><code>children</code>: This argument must be an Array of objects, with each object containg <code>el</code>, which is the element that is getting placed, <code>row</code>, which is the row the element is being placed in(zero-indexed), and <code>column</code>, which is the column the element is being placed in(zero-indexed). The object can have optional properties, which are <code>rowspan</code>, which is the amount of rows the element takes up, and <code>columnspan</code>, which is the amount of columns the element takes up.</li>
+      <li><code>options</code>: This argument is optional and is an object with they keys <code>rowSizes</code> and <code>columnSizes</code>. <code>rowSizes</code> is the sizes each row has. Use <code>gridTempSize(size, unit, amount)</code> as the value for this key. <code>columnSizes</code> is the sizes each column has. Use <code>gridTempSize()</code> for this key as well. You can also give <code>cellSize</code>, and if you do you should take out <code>rowSizes</code> and <code>columnSizes</code>. <code>cellSize</code> must be a <code>CssSize</code> object.</li>
+    </ul>
+    <div id="gridsample">
+      <span>Hi! I span 2 cells.</span>
+      <span>Hi! I only take up one cell.</span>
+      <span>HI! I take up 1 cell.</span>
+    </div>
+    <pre><code class="language-javascript">//Example above
+easyCss()
+var div = document.getElementById('gridsample')
+grid(div, [
+  {
+    el:div.children[0],
+    row:0,
+    column:0,
+    rowspan:2
+  },
+  {
+    el:div.children[1],
+    row:0,
+    column:1
+  },
+  {
+    el:div.children[2],
+    row:1,
+    column:1
+  }
+], {
+  cellSize:new CssSize(100)
+})</code></pre>
+    <h4>flex(container, children, options)</h4>
+    <ul>
+      <li><code>container</code>: The flex container.</li>
+      <li><code>children</code>: An Array of objects, each containing these optional properties: 
+        <ul>
+          <li><code>order</code>: The order the flex items need to be in(not zero-indexed).</li>
+          <li><code>grow</code>: How large the flex item is compared to the others.</li>
+          <li><code>shrink</code>: How small the flex item is compared to the others.</li>
+          <li><code>length</code>: The initial length of the flex item. Must be a <code>CssSize</code> object.</li>
+        </ul>
+      </li>
+      <li>
+        <code>options</code>: An optional object containing these properties:
+        <ul>
+          <li><code>direction</code>: Either <code>row, column, row-reverse</code> or <code>column-reverse</code>.</li>
+          <li><code>wrap</code>: Either <code>wrap</code> or <code>nowrap</code></li>
+          <li><code>justify</code>: Either <code>middle, start, end, around</code> or <code>between</code>.</li>
+          <li><code>itemAlign</code>: Either <code>middle, top, bottom, stretch, baseline, around</code> or <code>between</code>.</li>
+          <li><code>contentAlign</code>: Either <code>middle, top, bottom, stretch, baseline, around</code> or <code>between</code>.</li>
+        </ul>
+      </li>
+    </ul>
+    <div id="flexsample">
+      <span>im span #1</span>
+      <span>im span #2</span>
+      <span>im span #3</span>
+    </div>
+    <pre><code class="language-javascript">var div = document.getElementById('flexsample')
+flex(div, [
+  {
+    el:div.children[0],
+    order:2,
+    grow:5
+  },
+  {
+    el:div.children[1],
+    order:3,
+    grow:1,
+    length:new CssSize(50)
+  },
+  {
+    el:div.children[2],
+    order:1,
+    grow:3
+  }
+], {
+  direction:'column'
+})</code></pre>
+    <h2>Others</h2>
+    <h4>place(el, x, y)</h4>
+    <p>el is a valid html element, and x and y are valid CssSize objects.</p>
+    <pre><code class="language-javascript">var p = document.getElementById('p')
+place(0, new CssSize(30), new CssSize(30))
+// p would be placed at x: 30px, and y: 30px</code></pre>
+    <h2>Download</h2>
+    <p><a href="easyCss.js" download>Download</a>, or add this line of code in your html file</p>
+    <pre><code class="language-javascript">&lt;script src="https://js-extras.shivankchhaya.repl.co/easyCss/easyCss.js">&lt;/script></code></pre>
+    <script src="easyCss.js"></script>
+    <script src="easycsstest.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

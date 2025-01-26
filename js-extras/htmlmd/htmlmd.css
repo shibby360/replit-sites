@@ -1,0 +1,9 @@
+body, button, input, textarea {
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+}
+textarea {
+	width: 400px;
+	height: 200px;
+}

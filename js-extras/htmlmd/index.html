@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>htmlmd</title>
+    <link href="htmlmd.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/an-old-hope.min.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://js-extra-shivankchhaya.repl.co/style.css">
+  </head>
+  <body>
+    <h1>htmlmd!</h1>
+    <h2>HTML to Markdown</h2>
+    <p>Function: htmltomd(html)</p>
+    <textarea name="" id="htmlin" placeholder="Paste HTML here"></textarea>
+    <br>
+    <button onclick="htmlmd()">HTML to Markdown!</button>
+    <p id="mdout">Markdown comes here...</p>
+    <h2>Markdown to HTML</h2>
+    <p>Function: mdtohtml(md, ifDoc, title)</p>
+    <textarea name="" id="mdin" placeholder="Paste Markdown here"></textarea>
+    <br>
+    <input type="checkbox" id="docornot">
+    <label for="docornot">Full HTML document, with &lt;!doctype html></label>
+    <br>
+    <input placeholder="document title" style="display: none;" id="doctitle">
+    <br>
+    <button onclick="mdhtml()">Markdown to html!</button>
+    <p id="htmlout">HTML comes here...</p>
+    <div id="htmlpreview">Preview here</div>
+    <h2>Download</h2>
+    <p><a href="htmlmd.js" download>Download</a>, or add this line of code in your html file</p>
+    <pre><code>&lt;script src="https://js-extras.shivankchhaya.repl.co/htmlmd/htmlmd.js">&lt;script></code></pre>
+    <script src="htmlmd.js"></script>
+    <script src="htmlmdtest.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
