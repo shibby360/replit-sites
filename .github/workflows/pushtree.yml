@@ -2,6 +2,8 @@ name: push site tree to README
 on: [push]
 jobs:
   add_tree:
+    permissions:
+      contents: write
     runs-on: ubuntu-22.04
     steps:
     - name: checkout repo
