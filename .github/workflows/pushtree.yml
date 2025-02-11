@@ -20,11 +20,11 @@ jobs:
                 unset IFS
                 safe_nitem=$(printf '%s\n' "${dirs[-1]}" | sed 's/[]\/$*.^[]/\\&/g')
                 safe_item_full=$(printf '%s\n' "${item#./}" | sed 's/[]\/$*.^[]/\\&/g')
-                sed_str="s/^(.*)(${safe_nitem})$/\1[\2](\/replit-sites\/${safe_item_full#./})/"
+                sed_str="s/^(.*)(${safe_nitem})$/\1[\2](https:\/\/shibby360.github.io\/replit-sites\/${safe_item_full#./})/"
                 ntree=$(echo "$ntree" | while read -r treitem; do echo ${treitem}; done | sed -E $sed_str)
         done
         echo "$ntree" | while read -r treeitem; do
-                echo "$treeitem"
+                echo "$treeitem  "
         done >> README.md
     - name: Commit and push changes
       env:
