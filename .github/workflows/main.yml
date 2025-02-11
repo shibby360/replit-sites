@@ -1,0 +1,36 @@
+name: push site tree to README
+on: [push]
+jobs:
+  add_tree:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+
+    - name: create tree
+      run: |
+        echo "# replit-sites" > README.md
+        echo "sites transferred over from replit  " >> README.md
+        routes=$(find . -type d | xargs -I {} sh -c 'if [ -f "{}/index.html" ]; then echo "{}"; fi')
+        ntree="$(tree -d)"
+        for item in $routes; do
+                IFS='/' read -ra dirs <<< "$item"
+                unset IFS
+                safe_nitem=$(printf '%s\n' "${dirs[-1]}" | sed 's/[]\/$*.^[]/\\&/g')
+                safe_item_full=$(printf '%s\n' "${item#./}" | sed 's/[]\/$*.^[]/\\&/g')
+                sed_str="s/^(.*)(${safe_nitem})$/\1[\2](\/replit-sites\/${safe_item_full#./})/"
+                ntree=$(echo "$ntree" | while read -r treitem; do echo ${treitem}; done | sed -E $sed_str)
+        done
+        echo "$ntree" | while read -r treeitem; do
+                echo "$treeitem"
+        done >> README.md
+    - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "shivank chhaya"
+        git config --global user.email "shivank.chhaya@gmail.com"
+        git add .
+        git commit -m "pushed new tree"
+        git push origin main
+      
