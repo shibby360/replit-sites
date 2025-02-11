@@ -26,7 +26,7 @@ jobs:
         done >> README.md
     - name: Commit and push changes
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
       run: |
         git config --global user.name "shivank chhaya"
         git config --global user.email "shivank.chhaya@gmail.com"
