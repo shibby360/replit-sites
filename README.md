@@ -32,7 +32,8 @@ sites transferred over from replit
 │   ├── pausing  
 │   ├── slow  
 │   └── stretching  
+├── [ssg-gift-cards](https://shibby360.github.io/replit-sites/ssg-gift-cards)  
 └── [svg_dynamic_editor](https://shibby360.github.io/replit-sites/svg_dynamic_editor)  
 └── [typed](https://shibby360.github.io/replit-sites/svg_dynamic_editor/typed)  
   
-33 directories  
+34 directories  
