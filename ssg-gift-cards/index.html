@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SSG Gift card</title>
+    <style>
+      #full .topimg {
+        float: left;
+        width: 50px;
+      }
+      #full .toptext {
+        float: left;
+        width: 200px;
+      }
+      #full .top {
+        margin: auto;
+        width: 300px;
+      }
+      #full .toptext h1 {
+        font-family: monospace;
+        text-align: center;
+      }
+      #full h4 {
+        font-family: monospace;
+        text-align: center;
+      }
+      #full p {
+        font-family: monospace;
+        text-align: center;
+        margin: 0;
+      }
+      #full {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      p {
+        font-family: monospace;
+        text-align: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='full'>
+      <div class="top">
+        <div class='topimg'>
+          <img src="confetti-nobg.png" alt="confetti" width='50px' height="50px">
+        </div>
+        <div class="toptext">
+          <h1>You got an SSG gift card!</h1>
+        </div>
+        <div class='topimg'>
+          <img src="confetti-nobg.png" alt="confetti" width='50px' height="50px">
+        </div>
+        <br style="clear: left;">
+      </div>
+      <h4 id="redeemcode"></h4>
+      <h4 id="from"></h4>
+      <h4 id="amount"></h4>
+    </div>
+    <p class="cutters">------------------------------------------------------------------------------------------</p>
+    <p class="cutters">Cut here</p>
+    <button onclick="printit()" id='print'>Print</button>
+    <button onclick="emailr()">Email</button>
+    <button onclick="changetxtcol(window.prompt('Which color?: '))">Change text color</button>
+    <button onclick="changebgcol(window.prompt('Which color?: '))">Change background color</button>
+    <button onclick="document.getElementById('bgimgfile').style.display = 'block'">Change background image</button>
+    <input type='file' onchange="filer()" style="display: none;" id='bgimgfile'>
+    <script src='https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js'></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById('redeemcode').innerText = "Redeem code:" + params.get('redeemcode')
+      document.getElementById('from').innerText = "From: " + params.get('from')
+      document.getElementById('amount').innerText = "Amount: " + params.get('amount')
+      function clearup() {
+        var els = document.getElementsByTagName('button')
+        for(var el = 0; el < els.length; el++) {
+          var nel = els[el]
+          nel.style.display = 'none'
+        }
+        var els2 = document.getElementsByTagName('input')
+        for(var el2 = 0; el2 < els2.length; el2++) {
+          var nel2 = els2[el2]
+          nel2.style.display = 'none'
+        }
+      }
+      function printit() {
+        alert('On your print screen, click on more settings then scroll down to options and enable background graphics to view background color/image. Also turn off headers and footers.')
+        clearup()
+        print()
+      }
+      function changetxtcol(col) {
+        col = col.replace(' ', '').toLowerCase()
+        document.querySelector('.toptext h1').style.color = col
+        var els = document.getElementsByTagName('h4')
+        for(var el = 0; el < els.length; el++) {
+          var nel = els[el]
+          nel.style.color = col
+        }
+      }
+      function changebgcol(col) {
+        if (window.confirm('Would you like to blend the image with the color(say no and have only your background color)?: ')) {
+
+        } else {
+          document.getElementById('full').style.backgroundImage = 'url("")'
+        }
+        col = col.replace(' ', '').toLowerCase()
+        document.getElementById('full').style.backgroundColor = col
+      }
+      function filer() {
+        if (window.confirm('Would you like to blend the image with the color(say no and only have your background image)?: ')) {
+
+        } else {
+          document.getElementById('full').style.backgroundColor = ''
+        }
+        document.getElementById('full').style.backgroundPosition = "center"
+        document.getElementById('full').style.backgroundRepeat = "no-repeat"
+        document.getElementById('full').style.backgroundSize = "100% 100%"
+        document.getElementById("bgimgfile").onchange = function() {
+          var url = URL.createObjectURL(this.files[0]);
+          document.getElementById('full').style.backgroundImage = "url(" + url + ")";
+        }
+      }
+      function emailr() {
+        emailjs.init('user_SrnqCXfGJLkCII6k4smVi')
+        var templateParams = {
+          subject: prompt('Subject?: '),
+          from_name: prompt('Name(This is the name that will show up when you send the email)?: '),
+          html_content: document.getElementsByTagName('html')[0].innerHTML,
+          to_email: prompt('Who is it for(Email)?:'),
+          to_name: prompt('Who is it for(Name)?: '),
+          reply_to: 'shivank.chhaya@gmail.com'
+        }
+        emailjs.send('default_service', 'free_template', templateParams)
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text)
+          }, function(error) {
+            console.log('FAILED...', error)
+          }
+        )
+      }
+    </script>
+  </body>
+</html>
