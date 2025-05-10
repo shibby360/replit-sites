@@ -1,0 +1,71 @@
+:root {
+  --morsub-color: green;
+  --gas-color: purple;
+  --metal-color: blue;
+}
+p {
+  font-family: monospace;
+}
+td:not(.empty) {
+  width: 50px;
+  height: 75px;
+  border: 3px black solid;
+}
+td p {
+  margin: 0;
+  text-align: center;
+}
+.atnm, .mass, .nm {
+  font-size: 75%;
+}
+.sym {
+  font-size: 200%;
+}
+#infomenu {
+  display: none;
+  text-align: center;
+  width: 50vw;
+  min-height: 100px;
+  border: 3px black solid;
+}
+#infomenu img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+#infomenu {
+  text-align: justify;
+}
+.atomimg, .elementinfo {
+  display: none;
+}
+#morsub span {
+  width: 10px;
+  height: 10px;
+  background: var(--morsub-color);
+  border-radius: 50%;
+  display: inline-block;
+}
+#gases span {
+  width: 10px;
+  height: 10px;
+  background: var(--gas-color);
+  border-radius: 50%;
+  display: inline-block;
+}
+#metals span {
+  width: 10px;
+  height: 10px;
+  background: var(--metal-color);
+  border-radius: 50%;
+  display: inline-block;
+}
+.morsub {
+  background: var(--morsub-color);
+}
+.gas {
+  background: var(--gas-color);
+}
+.metal {
+  background: var(--metal-color);
+}
