@@ -28,6 +28,7 @@ sites transferred over from replit
 ├── [js-extras](https://shibby360.github.io/replit-sites/js-extras)  
 │   ├── [easyCss](https://shibby360.github.io/replit-sites/js-extras/easyCss)  
 │   └── [htmlmd](https://shibby360.github.io/replit-sites/js-extras/htmlmd)  
+├── [language-of-magic](https://shibby360.github.io/replit-sites/language-of-magic)  
 ├── [picture_taker](https://shibby360.github.io/replit-sites/picture_taker)  
 ├── [speech_helper](https://shibby360.github.io/replit-sites/speech_helper)  
 │   ├── full  
@@ -38,4 +39,4 @@ sites transferred over from replit
 └── [svg_dynamic_editor](https://shibby360.github.io/replit-sites/svg_dynamic_editor)  
 └── [typed](https://shibby360.github.io/replit-sites/svg_dynamic_editor/typed)  
   
-36 directories  
+37 directories  
