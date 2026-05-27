@@ -1,0 +1,10 @@
+button, input{
+  background-color: black;
+  color: aqua;
+  font-family: monospace;
+}
+#thediv {
+  border-style: solid;
+  border-color: aqua;
+  width: 285px;
+}

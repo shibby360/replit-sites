@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href='calc.jpg' rel='icon' type='image/jpg'>
+  </head>
+  <body>
+    <div id='thediv'>
+      <input placeholder='Your equation goes here...' id='Put your equation'>
+      <button onclick='active()' id='Evaluate'>Go</button>
+      <button onclick='document.getElementsByTagName("input")[0].value = ""' id='All Clear'>AC</button>
+      <button onclick="document.getElementsByTagName('input')[0].value = document.getElementsByTagName('input')[0].value.slice(0, -1)" id='Clear Each'>CE</button>
+      <br>
+      <button onclick='addval(1)' id='1'>1</button>
+      <button onclick='addval(2)' id='2'>2</button>
+      <button onclick='addval(3)' id='3'>3</button>
+      <br>
+      <button onclick='addval(4)' id='4'>4</button>
+      <button onclick='addval(5)' id='5'>5</button>
+      <button onclick='addval(6)' id='6'>6</button>
+      <br>
+      <button onclick='addval(7)' id='7'>7</button>
+      <button onclick='addval(8)' id='8'>8</button>
+      <button onclick='addval(9)' id='9'>9</button>
+      <br>
+      <button onclick='addval("/")' id='Divide'>÷</button>
+      <button onclick='addval("*")' id='Multiply'>x</button>
+      <button onclick='addval("-")' id='Subtract'>-</button>
+      <br>
+      <button onclick='addval("(")' id='Opening Parenthis'>(</button>
+      <button onclick='addval("+")' id='Add'>+</button>
+      <button onclick='addval(")")' id='Closing Parenthis'>)</button>
+      <br>
+      <button onclick='addval(0)' id='0'>0</button>
+      <button onclick='ansser()' id='Ans'>Ans</button>
+      <button onclick='frationze()' id='Fraction'>Fraction</button>
+      <br>
+      <button onclick='addval(".")' id='.'>.</button>
+      <button onclick='roundit()' id='Round'>Round</button>
+      <button onclick='addval("**")' id='Exponent'>Exponent[**]</button>
+      <br>
+      <button onclick='addval("%")' id='Modulus'>Modulus[%]</button>
+      <button onclick="document.getElementsByTagName('input')[0].value = factorial(Number(document.getElementsByTagName('input')[0].value))" id='Factorial'>Factorial</button>
+      <br>
+      <button onclick='piyer()' id='π'>π</button>
+      <button onclick="sqr2()" id='Square root'>Square root</button>
+      <button onclick="document.getElementsByTagName('input')[0].value = document.getElementsByTagName('input')[0].value / 100" id='To %'>To %</button>
+      <br>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
