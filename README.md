@@ -2,6 +2,7 @@
 sites transferred over from replit  
 .  
 ├── [alchemy](https://shibby360.github.io/replit-sites/alchemy)  
+├── [calculator](https://shibby360.github.io/replit-sites/calculator)  
 ├── [clock](https://shibby360.github.io/replit-sites/clock)  
 ├── color  
 │   ├── [color_picker](https://shibby360.github.io/replit-sites/color/color_picker)  
@@ -39,4 +40,4 @@ sites transferred over from replit
 └── [svg_dynamic_editor](https://shibby360.github.io/replit-sites/svg_dynamic_editor)  
 └── [typed](https://shibby360.github.io/replit-sites/svg_dynamic_editor/typed)  
   
-37 directories  
+38 directories  
