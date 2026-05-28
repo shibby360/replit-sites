@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+}
+p {
+  color: aqua;
+  font-family: monospace;
+  text-align: center;
+}
+a {
+  font-family: monospace;
+}

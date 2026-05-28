@@ -1,0 +1,111 @@
+h1, h2, h3, footer {
+  color: aqua;
+  font-family: monospace;
+  text-align: center;
+}
+body {
+  background-color: black;
+}
+a {
+  font-family: monospace;
+}
+#linkdiv {
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+  background-color: #000;
+}
+#linkdiv li {
+  display: block;
+  border: 1px solid #ffffff;
+}
+#linkdiv li a {
+  display: inline;
+  color: brown;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+#linkdiv li a:hover {
+  color: aqua;
+}
+button {
+  color: red;
+  font-family: monospace;
+  background-color: blue;
+  font-size: 12px;
+}
+a:visited {
+  color: brown;
+}
+a:hover {
+  color: aqua;
+}
+#spammer {
+  background-color: red;
+  color: white;
+}
+#alerter {
+  background-color: green;
+  color: white;
+}
+p {
+  color: white;
+  font-size: 12px;
+  font-family: monospace;
+}
+#buttondiv {
+  text-align: center;
+}
+input, textarea {
+  text-align: center;
+  color: aqua;
+  background-color: black;
+  border-radius: 4px;
+}
+input:focus {
+  border: 3px solid #555555;
+  outline: none;
+}
+.windowers {
+  background-color: black;
+  color: white;
+}
+#wrner {
+  background-color: yellow;
+  color: white;
+}
+#errr {
+  background-color: red;
+  color: white;
+}
+
+/*Right click menu*/
+.context-menu { 
+  position: absolute; 
+  text-align: center; 
+  background: rgb(75, 75, 75);
+  border: 1px solid black; 
+} 
+  
+.context-menu ul { 
+  padding: 0px; 
+  margin: 0px; 
+  min-width: 150px; 
+  list-style: none; 
+}
+  
+.context-menu ul li { 
+  padding-bottom: 7px; 
+  padding-top: 7px; 
+  border: 1px solid black; 
+} 
+  
+.context-menu ul li a { 
+  text-decoration: underline;
+  color: aqua; 
+} 
+  
+.context-menu ul li:hover { 
+  background: brown; 
+}

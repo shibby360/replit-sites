@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+}
+h4, p, footer {
+  color: purple;
+  font-family: monospace;
+}
+a {
+  font-family: monospace;
+}
