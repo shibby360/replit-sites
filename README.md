@@ -5,6 +5,8 @@ sites transferred over from replit
 ├── [calculator](https://shibby360.github.io/replit-sites/calculator)  
 ├── [clock](https://shibby360.github.io/replit-sites/clock)  
 ├── color  
+│   ├── [adding-images](https://shibby360.github.io/replit-sites/color/adding-images)  
+│   │   └── assets  
 │   ├── [color_picker](https://shibby360.github.io/replit-sites/color/color_picker)  
 │   ├── [color_shapes](https://shibby360.github.io/replit-sites/color/color_shapes)  
 │   │   ├── [hue](https://shibby360.github.io/replit-sites/color/color_shapes/hue)  
@@ -51,4 +53,4 @@ sites transferred over from replit
 └── [svg_dynamic_editor](https://shibby360.github.io/replit-sites/svg_dynamic_editor)  
 └── [typed](https://shibby360.github.io/replit-sites/svg_dynamic_editor/typed)  
   
-49 directories  
+51 directories  
