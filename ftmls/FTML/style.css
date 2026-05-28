@@ -1,0 +1,6 @@
+child[gender='male'] {
+  hair-length: short;
+}
+child[gender='female'] {
+  hair-length: long;
+}
